@@ -82,6 +82,18 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     
+    const transportation = data.reduce(function(obj, item) {
+      if (!obj[item]) {
+        obj[item] = 0;
+        console.log("Type 1: " + typeof(obj));
+        
+      }
+      obj[item]++;
+      console.log("Type 2: " + typeof(obj));
+      return obj;
+    }, {});
+
+    console.log(transportation);
 
   </script>
 </body>
